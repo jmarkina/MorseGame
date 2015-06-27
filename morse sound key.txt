@@ -1,0 +1,3 @@
+easymorse.mp3 = hello world
+mediummorse.mp3 = attending neohack 15 at rackspace
+hardmorse.mp3 = order chocolate chip cookies for 17 people
