@@ -1,18 +1,18 @@
 var LESSONS = 
 	{
 		"Lesson1": {
-			soundURL: "whatever",
+			soundURL: "sound%20files/easymorse.mp3",
 			text: "hello world",
-			//morse: "whatever"
+			morse: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 			},
 		"Lesson2": {
-			soundURL: "whatever",
+			soundURL: "sound%20files/mediummorse.mp3",
 			text: "attending neohack 15 at rackspace",
-			//morse: "whatever"
+			morse: ".- - - . -. -.. .. -. --. / -. . --- .... .- -.-. -.- / .---- ..... / .- - / .-. .- -.-. -.- ... .--. .- -.-. ."
 		}
 		"Lesson3": {
-			soundURL: "whatever",
+			soundURL: "sound%20files/hardmorse.mp3",
 			text: "order chocolate chip cookies for 17 people",
-			//morse: "whatever"
+			morse: "--- .-. -.. . .-. / -.-. .... --- -.-. --- .-.. .- - . / -.-. .... .. .--. / -.-. --- --- -.- .. . ... / ..-. --- .-. / .---- --... / .--. . --- .--. .-.. ."
 		}
 	};
