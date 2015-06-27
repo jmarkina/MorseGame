@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Saving the world with Morse</title>
+    <link rel="stylesheet" type="text/css" href="css/application.css" media="screen">
+	<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+	<script> var ref = new Firebase("https://morse.firebaseio.com/");
+	$("submit").click(function() {
+		var username = $("#username").val();
+		var score = $("score").val();
+		ref.child("scores").push({
+	  	username: username;
+	  	score: score;
+	});
+		ref.child("scores").on("child_added", function(snapshot){
+			var scoreThing = snapshot.val();
+			console.log("scoreThing");
+
+			var html = $("li/").text();
+			$("#leaderboard").append(html);
+		});
+		$("#login").click(function(){
+
+		});
+
+	});
+</script>
+</head>
+ <body>
+<header>
+</header>
+<section class="leaderboard">
+	
+</section>
+<footer>
+	
+</footer>
+</body>
+<html>
