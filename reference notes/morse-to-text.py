@@ -1,16 +1,3 @@
-'''
-Write a program that can translate Morse code in the format of ...---...
-
-A space and a slash will be placed between words. ..- / --.-
-
-For bonus, add the capability of going from a string to Morse code.
-
-Super-bonus if your program can flash or beep the Morse.
-
-This is your Morse to translate:
-
-.... . .-.. .-.. --- / -.. .- .. .-.. -.-- / .--. .-. --- --. .-. .- -- -- . .-. / --. --- --- -.. / .-.. ..- -.-. -.- / --- -. / - .... . / -.-. .... .- .-.. .-.. . -. --. . ... / - --- -.. .- -.--
-'''
 #Begin by defining morse code.
 #"/" and " " are included in the code array and will be handled like any other character
 code = [['a', '.-'], ['b', '-...'], ['c', '-.-.'], ['d', '-..'], ['e', '.'], ['f', '..-.'], ['g', '--.'], ['h', '....'], ['i', '..'], ['j', '.---'], ['k', '-.-'], ['l', '.-..'], ['m', '--'], ['n', '-.'], ['o', '---'], ['p', '.--.'], ['q', '--.-'], ['r', '.-.'], ['s', '...'], ['t', '-'], ['u', '..-'], ['v', '...-'], ['w', '.--'], ['x', '-..-'], ['y', '-.--'], ['z', '..--'], ['1', '.----'], ['2', '..---'], ['3', '...--'], ['4', '....-'], ['5', '.....'], ['6', '-....'], ['7', '--...'], ['8', '---.'], ['9', '----.'], ['0', '-----'], [' ', '/']] 
