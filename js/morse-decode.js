@@ -38,47 +38,57 @@
     "z": "--.."
 }
 
-
-
-function checkASCII(data, lesson) {
-	var lessonText = lesson.text;
-	if (data.toLowerCase() === lessonText.toLowerCase()) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-//console.log(checkASCII("hello world", LESSONS.Lesson1));
-//console.log(checkASCII("world", LESSONS.Lesson1));
-
+// function checkASCII(data, lesson) {
+// 	var lessonText = lesson.text;
+// 	if (data.toLowerCase() === lessonText.toLowerCase()) {
+// 		return true;
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// }
+var correctText = [];
 //initial launch
 $("#display-morse").text(textToMorse(LESSONS.Lesson1.text));
 
+//clear button
 $("#clear").click(function() {
     $("#morse").val("");
 })
 
- $("#morse").keyup(function(e) {
-    var expected = LESSONS.Lesson1.text;
- 	//$("#display-text").text(textToMorse($("#morse").val()).join(" "));
-	var input = $("#morse").val();
-    var correct = input;
-    while (correct.length > 0) {
-        if (expected.startsWith(correct)) {
-            break;
-        }
-        else {
-            correct = correct.slice(0, correct.length - 1);
-        }
-    }
-    var diff = expected.slice(correct.length);
+$("#morse").keyup(function(e) {
+  var expected = LESSONS.Lesson1.text;
+  	//$("#display-text").text(textToMorse($("#morse").val()).join(" "));
+  var input = $("#morse").val();
+  console.log(input);
+  
+  inputArr = input.split("");
+  //console.log(inputArr);
 
+  var correct = expected.slice(0, input.length);
+
+  var diff = expected.slice(correct.length);
+
+  if (input === correct) {
     $("#display-morse").html('<span class="typed">' + textToMorse(correct) + '</span> <span class="untyped">' + textToMorse(diff) + '</span>');
+    $("#correct-text").html(input);
+  }
+  //console.log(correct);
+  //var correct = input;
+  // while (correct.length > 0) {
+  //   if (correct.indexOf(input) === 0) {
+  //       break;
+  //   }
+  //   else {
+  //       correct = correct.slice(0, correct.length - 1);
+  //   }
+  // }
+  //var diff = expected.slice(correct.length);
 
-    //$("#morse").val(correct);
- })
+  //$("#display-morse").html('<span class="typed">' + textToMorse(correct) + '</span> <span class="untyped">' + textToMorse(diff) + '</span>');
+
+//$("#morse").val(correct);
+})
 
 function textToMorse(text) {
 	var morseCharList = [];
@@ -87,5 +97,3 @@ function textToMorse(text) {
 	}
 	return morseCharList.join(" ");
 }
-
-//console.log(textToMorse("hi").join(""));

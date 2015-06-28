@@ -42,9 +42,9 @@ input, select { vertical-align: middle; }
 
 /*--------------------------------Beginning of code------------------------------------*/
 body {
-	font-family: sans-serif;
+	font-family: monospace;
 }
-#morse-area {
+#morse-text {
 	position: relative;
 }
 #display-morse {
@@ -52,23 +52,34 @@ body {
 	margin: 40px auto;
 	font-size: 40px;
 	text-align: center;
-	font-family: monospace;
+}
+#correct-text {
+	display: block;
+	margin: 0 auto;
+	font-size: 40px;
+	height: 70px;
+	text-align: center;
+	letter-spacing: 0.8em;
+}
+#decode-btns {
+	text-align: center;
+	margin-top: 30px;
 }
 textarea {
 	display: block;
-	margin: 100px auto;
+	margin: 0 auto;
 	font-size: 50px;
 	max-width: 700px;
 	font-family: monospace;
 }
 button {
 	display: block;
-	margin: 0 auto;
+	margin: 20px 20px;
+}
 
-}
 .typed {
-	color: green;
+	color: lime;
 }
-.untyped {
+/*.untyped {
 	color: red;
-}
+}*/
