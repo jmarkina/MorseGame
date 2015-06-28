@@ -1,13 +1,24 @@
 h1 {
 	color: #0b6a65;
 }
-
 .container {
 	text-align: center;
 }
+.container h1 {
+	display: inline-block;
+}
+.alien-container {
+	vertical-align: middle;
+	height: auto;
+	padding-bottom: 20px;
+	display: flex;
+  	align-items: center;
+}
 .jumbotron.bg-color { 
 	background-color: #f4f1f5;
-	padding-top: 0;
+	padding-top: 40px;
+	width: 94%;
+  	margin: 0 auto;
 }
 .navbar.navbar-default.bg-color {
 	background-color: #f4f1f5;
@@ -15,17 +26,21 @@ h1 {
 .btn.btn-primary.btn-lg.btn-cstm {
 	background-color: #148c95;
 	border-color: #08727a;
-	line-height: 3.4;
 	margin-right: 80px;
 	height: 85px;
   	width: 300px;
+  	line-height: 2.2;
+	font-size: 28px;
+	text-shadow: 1px 1px #000;
 }
 .btn.btn-success.btn-lg.btn-cstm {
 	background-color: #eeb53c;
 	border-color: #e9a30e;
-	line-height: 3.4;
 	height: 85px;
   	width: 300px;
+  	line-height: 2.2;
+	font-size: 28px;
+	text-shadow: 1px 1px #000;
 }
 .leaders {
 	width: 100%;
@@ -55,7 +70,18 @@ h1 {
 .alien {
 	background: url(../images/alien.png) no-repeat;
 	background-size: contain;
-  	width: 300px;
+  	width: 262px;
   	height: 300px;
-  	margin: 0 auto;
+  	padding: 10px;
+  	margin-left: 26px;
+  	display: inline-block;
+}
+.save {
+	margin-left: 40px;
+}
+.learn {
+	text-align: right;
+}
+.buttons {
+	margin-top:35px;
 }
