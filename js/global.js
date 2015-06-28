@@ -11,7 +11,3 @@ function displayElapsed(elapsed) {
 } //end of displayElapsed
 
 
-$(".codeimg").hide();
-$(".cheatsheet").click(function(){
-	$(".codeimg").toggle();
-});
