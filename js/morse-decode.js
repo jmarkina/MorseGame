@@ -45,10 +45,10 @@ $("#display-morse").text(textToMorse(LESSONS.Lesson1.text));
 //Clear button
 $("#clear").click(function() {
     $("#morse").val("");
-    $("#correct-text").val("");
+    $("#correct-text").text("");
     clearInterval(counter);
-    time = null;
-    $("#timer").text(displayElapsed(0));
+    //time = null;
+    $("#timer").text("00:00.000");
 })
 
 $("#morse").keyup(function(e) {
