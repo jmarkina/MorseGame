@@ -6,7 +6,9 @@ function displayElapsed(elapsed) {
   if (seconds < 10) { seconds = "0" + seconds };
   if (milli < 10) { milli = "00" + milli };
   if (milli < 100) { milli = "0" + milli };
-  $("#timer").text("" + minutes + ":" + seconds + "." + milli);
+  var elapsedAsString = "" + minutes + ":" + seconds + "." + milli
+  $("#timer").text(elapsedAsString);
+  return elapsedAsString;
 } //end of displayElapsed
 $(".codeimg").hide();
 $(".cheatsheet").click(function(){

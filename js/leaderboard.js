@@ -29,7 +29,7 @@ $.getJSON(baseURL+"entries.json",
         		tr = $('<tr/>');
 		        tr.append("<td>" + rank + "</td>");
 		        tr.append("<td>" + data[i].member + "</td>");
-		        tr.append("<td>" + data[i].score + "</td>");
+		        tr.append("<td>" + displayElapsed(data[i].score) + "</td>");
 		        $('#leader_table').append(tr);
 		        rank++;
     		}
