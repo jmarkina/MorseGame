@@ -106,7 +106,7 @@ h1 {
 /*---------------Cheatsheet-----------------*/
 
 .codeimg {
-	background: url(../images/MorseCode.png) no-repeat;
+	background: url(images/MorseCode.png) no-repeat;
 	background-size: contain;
 	width: 350px;
 	height: 452px;
