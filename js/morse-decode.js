@@ -54,14 +54,26 @@ function checkASCII(data, lesson) {
 //console.log(checkASCII("world", LESSONS.Lesson1));
 
 //initial launch
-$("#display-text").text(textToMorse(LESSONS.Lesson1.text));
+$("#display-morse").text(textToMorse(LESSONS.Lesson1.text));
 
  $("#morse").keyup(function(e) {
+    var expected = LESSONS.Lesson1.text;
  	//$("#display-text").text(textToMorse($("#morse").val()).join(" "));
 	var input = $("#morse").val();
-    var diff = LESSONS.Lesson1.text.slice(input.length);
+    var correct = input;
+    while (correct.length > 0) {
+        if (expected.startsWith(correct)) {
+            break;
+        }
+        else {
+            correct = correct.slice(0, correct.length - 1);
+        }
+    }
+    var diff = expected.slice(correct.length);
 
-    $("#display-text").html('<span class="typed">' + textToMorse(input) + '</span> <span class="untyped">' + textToMorse(diff) + '</span>');
+    $("#display-morse").html('<span class="typed">' + textToMorse(correct) + '</span> <span class="untyped">' + textToMorse(diff) + '</span>');
+
+    //$("#morse").val(correct);
  })
 
 function textToMorse(text) {

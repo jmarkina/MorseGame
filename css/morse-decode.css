@@ -41,20 +41,25 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 input, select { vertical-align: middle; }
 
 /*--------------------------------Beginning of code------------------------------------*/
+body {
+	font-family: sans-serif;
+}
 #morse-area {
 	position: relative;
 }
-#display-text {
+#display-morse {
 	display: block;
 	margin: 40px auto;
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
+	font-family: monospace;
 }
 textarea {
 	display: block;
 	margin: 100px auto;
 	font-size: 50px;
 	max-width: 700px;
+	font-family: monospace;
 }
 button {
 	display: block;
