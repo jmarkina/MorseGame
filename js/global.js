@@ -10,6 +10,8 @@ function displayElapsed(elapsed) {
   $("#timer").text(elapsedAsString);
   return elapsedAsString;
 } //end of displayElapsed
+
+
 $(".codeimg").hide();
 $(".cheatsheet").click(function(){
 	$(".codeimg").toggle();
