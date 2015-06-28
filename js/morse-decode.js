@@ -47,6 +47,8 @@ $("#clear").click(function() {
     $("#morse").val("");
     $("#correct-text").val("");
     clearInterval(counter);
+    time = null;
+    $("#timer").text(displayElapsed(0));
 })
 
 $("#morse").keyup(function(e) {
