@@ -22,12 +22,17 @@ $(document).ready(function () {
 $.getJSON(baseURL+"entries.json",
 	function (data) {
 	    var tr;
+	    var rank = 1;
 	    for (var i = 0; i < data.length; i++) {
-	        tr = $('<tr/>');
-	        tr.append("<td>" + (i+1) + "</td>");
-	        tr.append("<td>" + data[i].member + "</td>");
-	        tr.append("<td>" + data[i].score + "</td>");
-	        $('#leader_table').append(tr);
+	        if(data[i].member !== null && data[i].member.length)
+        	{
+        		tr = $('<tr/>');
+		        tr.append("<td>" + rank + "</td>");
+		        tr.append("<td>" + data[i].member + "</td>");
+		        tr.append("<td>" + data[i].score + "</td>");
+		        $('#leader_table').append(tr);
+		        rank++;
+    		}
 	    }
 });
 });
