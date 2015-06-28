@@ -50,7 +50,6 @@ h1 {
 .btn.btn-success.btn-lg.btn-cstm:hover {
 	background-color: #e9a30e;
 }
-
 .sitename {
 	margin-top: 5px;
 	display: inline-block;
@@ -85,6 +84,16 @@ h1 {
 .buttons {
 	margin-top:35px;
 }
+/*---------------Cheatsheet-----------------*/
+
+.codeimg {
+	background-image: url(../images/morsecode.png);
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+}
+
+
 
 /*---------------Leaderboard-----------------*/
 
@@ -93,5 +102,16 @@ h1 {
 	height: auto;
 /*	background-color: #c0ffee;
 */	text-align: center;
-	height: 500px;
+	padding-bottom: 100px;
+}
+.leaders {
+	margin-top: 40px;
+}
+.leaders th {
+	font-weight: bold;
+}
+.table.table-striped.board {
+	width: 700px;
+	margin:0 auto;
+	text-align: left;
 }

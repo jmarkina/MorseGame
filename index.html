@@ -37,7 +37,8 @@
 		</div>
 		</div>
 			<p>Invaders have arrived from outer space. The human resistance needs you to transmit and receive encoded messages.</p>
-			<p><a href="#decode">Learn</a> - <a href="">Compete</a> - <a href="wtf.html">Survive</a></p>
+			<p><a class="cheatsheet">Learn</a> - <!-- <a href=""> -->Compete<!-- </a> --> - <!-- <a href="wtf.html"> -->Survive<!-- </a> --></p>
+			<div class="codeimg"></div>
 			<div class="buttons">
 			<a href="#decode" type="button" class="btn btn-primary btn-lg btn-cstm">Decode Messages</a>
   			<a type="button" class="btn btn-success btn-lg btn-cstm">Encode Messages</a>
@@ -50,24 +51,38 @@
 	</section> -->
 	
 	<section id="leaderboard">
-		<h1>Rankings</h1>
+		<h1>Leaders of the Pack</h1>
 		<div class="leaders">
-			<table>
-			  <tr>
-			    <td>Jill</td>
-			    <td>Smith</td> 
-			    <td>50</td>
-			  </tr>
-			  <tr>
-			    <td>Eve</td>
-			    <td>Jackson</td> 
-			    <td>94</td>
-			  </tr>
+			<table class="table table-striped board">
+				<tr>
+			    <th>Rank</th>
+			    <th>Name</th> 
+			    <th>Score</th>
+				</tr>
+				<tr>
+				<td>1</td>
+				<td>Jackson</td> 
+				<td>94</td>
+				</tr>
+				<tr>
+				<td>2</td>
+				<td>Maya</td> 
+				<td>80</td>
+				</tr>
+				<tr>
+				<td>3</td>
+				<td>John</td> 
+				<td>70</td>
+				</tr>
 			</table>
 		</div>
 	</section>
 	<section id="decode">
 		<h3>Translate Morse Code into English. Work as fast as you can. You are being timed!</h3>
+		<audio controls>
+  			<source src="sound/mediummorse.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
 		<div id="display-morse"></div>
 	<div id="correct-text"></div>
 

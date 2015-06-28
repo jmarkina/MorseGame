@@ -63,6 +63,7 @@ input, select { vertical-align: middle; }
 	margin: 40px 20px;
 	font-size: 40px;
 	text-align: center;
+	font-family: monospace !important;
 }
 #correct-text {
 	display: block;
@@ -115,6 +116,9 @@ button {
   	font-size: 18px;
   	color: #fff;
   	text-shadow: 1px 1px #000;
+}
+audio {
+	margin-top: 20px;
 }
 /*.untyped {
 	color: red;
