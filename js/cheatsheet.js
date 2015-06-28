@@ -1,5 +1,5 @@
 $(function {
-	$(.cheatsheet).click({
-		$(.codeimg).append();
+	$(".cheatsheet").click({
+		$(".codeimg").append();
 	)}
 })

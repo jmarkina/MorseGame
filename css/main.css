@@ -87,10 +87,11 @@ h1 {
 /*---------------Cheatsheet-----------------*/
 
 .codeimg {
-	background-image: url(../images/morsecode.png);
-	background-size: cover;
-	width: 100px;
-	height: 100px;
+	background: url(../images/MorseCode.png) no-repeat;
+	background-size: contain;
+	width: 350px;
+	height: 452px;
+	margin-left: 311px;
 }
 
 

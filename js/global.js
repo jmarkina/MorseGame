@@ -8,4 +8,7 @@ function displayElapsed(elapsed) {
   if (milli < 100) { milli = "0" + milli };
   $("#timer").text("" + minutes + ":" + seconds + "." + milli);
 } //end of displayElapsed
-
+$(".codeimg").hide();
+$(".cheatsheet").click(function(){
+	$(".codeimg").toggle();
+});
