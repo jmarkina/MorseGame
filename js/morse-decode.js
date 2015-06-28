@@ -73,7 +73,7 @@ console.log(checkASCII("hello world", LESSONS.Lesson1));
 console.log(checkASCII("world", LESSONS.Lesson1));
 
 $("#morse").keyup(function(e) {
-	$("#display-text").text(textToMorse($("#morse").val()).join(""));
+	$("#display-text").text(textToMorse($("#morse").val()).join(" "));
 	
 })
 

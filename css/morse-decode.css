@@ -50,10 +50,12 @@ input, select { vertical-align: middle; }
 	border: black solid 1px;
 	width: 500px;
 	height: 200px;
+	font-size: 50px;
 }
-textarea{
+textarea {
 	display: block;
 	margin: 100px auto;
+	font-size: 50px;
 }
 button {
 	display: block;
