@@ -76,13 +76,21 @@ myAudio.play();
 function init() {
 	myAudio = $("#alarm").first().get(0)
 	var morseCode = [];
-	var d, t;
+	var d, t, spaceStart;
   $(document).keydown(function(evt) {
     if (evt.keyCode == 32 && d == null) {
 		d = new Date();
         t = d.valueOf();
 		myAudio.addEventListener('ended', loopSound, false);
 		myAudio.play();
+		if (spaceStart !== null) {
+			var spaceValue = t - spaceStart;
+			if (spaceValue > 500 && spaceValue <= 1000) {
+				morseCode.push(" ");
+			} else if (spaceValue > 1000) {
+				morseCode.push(" / ");
+			}
+		}
     }
   });
   $(document).keyup(function(evt) {
@@ -94,10 +102,10 @@ function init() {
 		 d = null;
 		 t = null;
 		 // can I use tend to test for spaces?
-		 
+		 spaceStart = dend.valueOf();
 		 morseCode.push(morseCheck(finetime));
 		 console.log(morseCode.join(" "));
-		 $("#display-morse").html(morseCode.join(" "));
+		 $("#display-morse").html(morseCode.join(""));
 		}
   });
 }
