@@ -149,15 +149,17 @@ function generator(){
  "Lamb",
  "Ground hog",
  "Hyena",
- "Alpaca",]
+ "Alpaca"]
 
   // Random numbers are made
   var randomNumber1 = parseInt(Math.random() * adjectives.length);
   var randomNumber2 = parseInt(Math.random() * animals.length);
-  var name = adjectives[randomNumber1] + " " + animals[randomNumber2];
-
+  window.agent_name = adjectives[randomNumber1] + " " + animals[randomNumber2];
+};
   //alert(name); //Delete this when the below works            
 
+$(document).ready(function () {
+  generator();
   //If there's already a name it is removed  
   if(document.getElementById("result")){
     document.getElementById("placeholder").removeChild(document.getElementById("result"));
@@ -166,6 +168,20 @@ function generator(){
   //The Name is added as a textnode. Textnode is added to the placeholder.
   var element = document.createElement("div");
   element.setAttribute("id", "result");
-  element.appendChild(document.createTextNode(name));
+  element.appendChild(document.createTextNode(agent_name));
   document.getElementById("placeholder").appendChild(element);
-}
+});
+
+function agent_refresh(){
+   generator();
+  //If there's already a name it is removed  
+  if(document.getElementById("result")){
+    document.getElementById("placeholder").removeChild(document.getElementById("result"));
+  }
+  // A div element is created to show the generated name.
+  //The Name is added as a textnode. Textnode is added to the placeholder.
+  var element = document.createElement("div");
+  element.setAttribute("id", "result");
+  element.appendChild(document.createTextNode(agent_name));
+  document.getElementById("placeholder").appendChild(element);
+};
