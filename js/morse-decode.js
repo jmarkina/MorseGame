@@ -71,6 +71,7 @@ $("#morse").keyup(function(e) {
     var score = endTime - time;
     clearInterval(counter);
     $("#timer").text(displayElapsed(score));
+    save_score(agent_name, score);
   }
 
 }) //end of keyup
