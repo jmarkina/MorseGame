@@ -1,5 +1,23 @@
+h1 {
+	color: #0b6a65;
+}
+
 .container {
 	text-align: center;
+}
+.jumbotron.bg-color { 
+	background-color: #f4f1f5;
+}
+.navbar.navbar-default.bg-color {
+	background-color: #f4f1f5;
+}
+.btn.btn-primary.btn-lg.btn-color {
+	background-color: #148c95;
+	border-color: #08727a;
+}
+.btn.btn-success.btn-lg.btn-color {
+	background-color: #eeb53c;
+	border-color: #e9a30e;
 }
 .leaders {
 	width: 100%;
@@ -11,11 +29,18 @@
 	text-align: center;
 }
 .sitename {
+	margin-top: 5px;
 	display: inline-block;
 	font-size: 26px;
 	font-weight: bold;
-	color: #EB0AA0;
+	color: #e9541c;
 }
 .navbar-right {
 	margin-top: 6px;
+}
+.log-in {
+	background-color: #eeb53c;	
+}
+.sign-up {
+	background-color: #148c95;
 }
