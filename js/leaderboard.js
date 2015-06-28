@@ -17,3 +17,17 @@ $("#open").click(function()
 		data: {page: 1}
 		})
 })
+
+$(document).ready(function () {
+$.getJSON(baseURL+"entries.json",
+	function (data) {
+	    var tr;
+	    for (var i = 0; i < data.length; i++) {
+	        tr = $('<tr/>');
+	        tr.append("<td>" + (i+1) + "</td>");
+	        tr.append("<td>" + data[i].member + "</td>");
+	        tr.append("<td>" + data[i].score + "</td>");
+	        $('#leader_table').append(tr);
+	    }
+});
+});
