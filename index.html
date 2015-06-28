@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <title>Saving the world with Morse</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+<link rel="stylesheet" href="css/morse-decode.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 </head>
@@ -46,12 +49,40 @@
 		like put a table here or something
 	</section> -->
 	
-	<section id="leader" class="leaderboard">
+	<section id="leaderboard">
 		<h1>Rankings</h1>
-		<div class="leaders"></div>
+		<div class="leaders">
+			<table>
+			  <tr>
+			    <td>Jill</td>
+			    <td>Smith</td> 
+			    <td>50</td>
+			  </tr>
+			  <tr>
+			    <td>Eve</td>
+			    <td>Jackson</td> 
+			    <td>94</td>
+			  </tr>
+			</table>
+		</div>
+	</section>
+	<section id="decode">
+		<h3>Translate Morse Code into English. Work as fast as you can. You are being timed!</h3>
+		<div id="display-morse"></div>
+	<div id="correct-text"></div>
+
+	<div id="morse-text">
+		<textarea id="morse" cols="150"></textarea>
+		<div id="decode-btns">
+			<button id="clear" class="btn btn-default btn-clr">Clear</button>
+			<button id="submit" class="btn btn-default btn-sbt">Submit</button>
+		</div>
+	</div>
 	</section>
 	<footer>
 	
 	</footer>
+	<script type="text/javascript" src="js/lessons.js"></script>
+	<script type="text/javascript" src="js/morse-decode.js"></script>
 </body>
 <html>

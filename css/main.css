@@ -50,15 +50,7 @@ h1 {
 .btn.btn-success.btn-lg.btn-cstm:hover {
 	background-color: #e9a30e;
 }
-.leaders {
-	width: 100%;
-	height: auto;
-	background-color: #c0ffee;
-}
-.leaderboard {
-	margin: 0 auto;
-	text-align: center;
-}
+
 .sitename {
 	margin-top: 5px;
 	display: inline-block;
@@ -92,4 +84,14 @@ h1 {
 }
 .buttons {
 	margin-top:35px;
+}
+
+/*---------------Leaderboard-----------------*/
+
+#leaderboard {
+	width: 100%;
+	height: auto;
+/*	background-color: #c0ffee;
+*/	text-align: center;
+	height: 500px;
 }
