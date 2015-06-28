@@ -7,17 +7,25 @@ h1 {
 }
 .jumbotron.bg-color { 
 	background-color: #f4f1f5;
+	padding-top: 0;
 }
 .navbar.navbar-default.bg-color {
 	background-color: #f4f1f5;
 }
-.btn.btn-primary.btn-lg.btn-color {
+.btn.btn-primary.btn-lg.btn-cstm {
 	background-color: #148c95;
 	border-color: #08727a;
+	line-height: 3.4;
+	margin-right: 80px;
+	height: 85px;
+  	width: 300px;
 }
-.btn.btn-success.btn-lg.btn-color {
+.btn.btn-success.btn-lg.btn-cstm {
 	background-color: #eeb53c;
 	border-color: #e9a30e;
+	line-height: 3.4;
+	height: 85px;
+  	width: 300px;
 }
 .leaders {
 	width: 100%;
@@ -43,4 +51,11 @@ h1 {
 }
 .sign-up {
 	background-color: #148c95;
+}
+.alien {
+	background: url(../images/alien.png) no-repeat;
+	background-size: contain;
+  	width: 300px;
+  	height: 300px;
+  	margin: 0 auto;
 }
