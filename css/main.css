@@ -2,6 +2,25 @@
 h1 {
 	color: #0b6a65;
 }
+#secretagent {
+	text-align: right;
+  	padding: 10px 20px 0 0;
+}
+#result {
+	/*margin: 5px 28px 5px 0;*/
+	display: inline-block;
+}
+.btn.btn-primary.btn-lg.btn-agent {
+	background-color: #E9541C;
+	border-color: #e84508;
+	text-shadow: 1px 1px #000;
+}
+.btn.btn-primary.btn-lg.btn-agent:hover {
+	background-color: #e84508;
+}
+.autoname {
+	display: inline-block;
+}
 .container {
 	text-align: center;
 }
@@ -17,7 +36,7 @@ h1 {
 }
 .jumbotron.bg-color { 
 	background-color: #f4f1f5;
-	padding-top: 40px;
+	padding-top: 2px;
 	width: 94%;
   	margin: 0 auto;
 }

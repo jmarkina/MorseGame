@@ -27,6 +27,18 @@
 			</div>
 		</nav> -->
 	<div class="jumbotron bg-color">
+
+		<section id="secretagent" class="agent">
+			<h3>Welcome Agent!</h3>
+			<div class="agentname">
+				<!-- The generator result and button. Change text on the button by changing button value. Be carefull changing ID's in this part -->
+				<div id="generator" >
+					<div id="placeholder"><h5 class="autoname">Your name is:&nbsp;</h5></div>
+					<input id="open" type="button" class="btn btn-primary btn-lg btn-agent" value="Change your name" onclick="agent_refresh()" />
+				</div>
+			</div>
+		</section>
+
 		<div class="container">
 		<div class="alien-container">
 		<div class="learn">
@@ -38,7 +50,7 @@
 		</div>
 		</div>
 			<p>Invaders have arrived from outer space. The human resistance needs you to transmit and receive encoded messages.</p>
-			<p><a class="cheatsheet">Learn</a> - <a href=""> Compete</a></p>
+			<p><a class="cheatsheet">Learn</a> - <a href="#leaderboard"> Compete</a> - <a href="about.html">Survive</a></p>
 			<div class="codeimg"></div>
 			<div class="buttons">
 			<a href="#decode" type="button" class="btn btn-primary btn-lg btn-cstm">Decode Messages</a>
@@ -47,19 +59,7 @@
 		</div>
 	</div>
 	</header>
-	<!-- <section id="morsetable" class="text-center">
-		like put a table here or something
-	</section> -->
-	<section id="secretagent" class="agent">
-		<h1>Welcome Agent!</h1>
-		<div class="agentname">
-			<!-- The generator result and button. Change text on the button by changing button value. Be carefull changing ID's in this part -->
-			<div id="generator" >
-				<div id="placeholder"></div>
-				<input id="open" type="button" class="btn btn-primary btn-lg btn-cstm" value="Secret Agent Name" onclick="agent_refresh()" />
-			</div>
-		</div>
-	</section>
+
 	<section id="leaderboard">
 		<h1>Leaders of the Pack</h1>
 		<div class="leaders">
