@@ -1,22 +1,3 @@
-var LESSONS = 
-	{
-		"Lesson1": {
-			soundURL: "sound%20files/easymorse.mp3",
-			text: "hello world",
-			morse: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
-			},
-		"Lesson2": {
-			soundURL: "sound%20files/mediummorse.mp3",
-			text: "attending neohack 15 at rackspace",
-			morse: ".- - - . -. -.. .. -. --. / -. . --- .... .- -.-. -.- / .---- ..... / .- - / .-. .- -.-. -.- ... .--. .- -.-. ."
-		},
-		"Lesson3": {
-			soundURL: "sound%20files/hardmorse.mp3",
-			text: "order chocolate chip cookies for 17 people",
-			morse: "--- .-. -.. . .-. / -.-. .... --- -.-. --- .-.. .- - . / -.-. .... .. .--. / -.-. --- --- -.- .. . ... / ..-. --- .-. / .---- --... / .--. . --- .--. .-.. ."
-		}
-	};
-
 	var ascii_to_morse = {
     " ": " / ",
     "0": "-----",
@@ -69,20 +50,26 @@ function checkASCII(data, lesson) {
 	}
 }
 
-console.log(checkASCII("hello world", LESSONS.Lesson1));
-console.log(checkASCII("world", LESSONS.Lesson1));
+//console.log(checkASCII("hello world", LESSONS.Lesson1));
+//console.log(checkASCII("world", LESSONS.Lesson1));
 
-$("#morse").keyup(function(e) {
-	$("#display-text").text(textToMorse($("#morse").val()).join(" "));
-	
-})
+//initial launch
+$("#display-text").text(textToMorse(LESSONS.Lesson1.text));
+
+ $("#morse").keyup(function(e) {
+ 	//$("#display-text").text(textToMorse($("#morse").val()).join(" "));
+	var input = $("#morse").val();
+    var diff = LESSONS.Lesson1.text.slice(input.length);
+
+    $("#display-text").html('<span class="typed">' + textToMorse(input) + '</span> <span class="untyped">' + textToMorse(diff) + '</span>');
+ })
 
 function textToMorse(text) {
 	var morseCharList = [];
 	for(var i = 0; i < text.length ; i++) {
 		morseCharList.push(ascii_to_morse[text[i]]);
 	}
-	return morseCharList;
+	return morseCharList.join(" ");
 }
 
-console.log(textToMorse("hi").join(""));
+//console.log(textToMorse("hi").join(""));
