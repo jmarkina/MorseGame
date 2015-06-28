@@ -9,4 +9,3 @@ function displayElapsed(elapsed) {
   $("#timer").text("" + minutes + ":" + seconds + "." + milli);
 } //end of displayElapsed
 
-$(".codeimg")
