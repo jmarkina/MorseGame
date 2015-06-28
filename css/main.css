@@ -1,3 +1,4 @@
+
 h1 {
 	color: #0b6a65;
 }
@@ -33,6 +34,10 @@ h1 {
 	font-size: 28px;
 	text-shadow: 1px 1px #000;
 }
+.btn.btn-primary.btn-lg.btn-cstm:hover {
+	background-color: #08727a;
+}
+
 .btn.btn-success.btn-lg.btn-cstm {
 	background-color: #eeb53c;
 	border-color: #e9a30e;
@@ -41,6 +46,9 @@ h1 {
   	line-height: 2.2;
 	font-size: 28px;
 	text-shadow: 1px 1px #000;
+}
+.btn.btn-success.btn-lg.btn-cstm:hover {
+	background-color: #e9a30e;
 }
 .leaders {
 	width: 100%;
