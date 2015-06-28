@@ -70,7 +70,7 @@ $("#morse").keyup(function(e) {
     var endTime = new Date().valueOf();
     var score = endTime - time;
     clearInterval(counter);
-    $("#timer").text(displayElapsed(score));
+    
   }
 
 }) //end of keyup
@@ -83,7 +83,7 @@ $("#morse").keydown(function() {
       time = new Date().valueOf();
       counter = setInterval(function() {
                       var elapsed = (new Date().valueOf()) - time;
-                      displayElapsed(elapsed); }, 100);
+                      $("#timer").text(displayElapsed(elapsed)); }, 100);
     }
 }) //end of keydown
 
