@@ -7,9 +7,10 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/name_gen.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 </head>
-<body>
+<body onload="generator()">
 	<header>
 		<nav class="navbar navbar-default bg-color">
 			<div class="container-fluid">
@@ -39,10 +40,18 @@
 	
 	<section id="leader" class="leaderboard">
 		<h1>Rankings</h1>
-		<div class="leaders"></div>
+		<div class="leaders">
+			<!-- The generator result and button. Change text on the button by changing button value. Be carefull changing ID's in this part -->
+			<div id="generator" >
+				<div id="placeholder"></div>
+				<input id="open" type="button" class="btn btn-primary btn-lg btn-cstm" value="MorseCode Agent Name" onclick="generator()" />
+			</div>
+		</div>
 	</section>
 	<footer>
 	
 	</footer>
+
+<script type="text/javascript" src="js/leaderboard.js"></script>
 </body>
 <html>
