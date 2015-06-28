@@ -45,8 +45,10 @@ $("#display-morse").text(textToMorse(LESSONS.Lesson1.text));
 //Clear button
 $("#clear").click(function() {
     $("#morse").val("");
-    $("#correct-text").val("");
+    $("#correct-text").text("");
     clearInterval(counter);
+    //time = null;
+    $("#timer").text("00:00.000");
 })
 
 $("#morse").keyup(function(e) {
@@ -70,7 +72,6 @@ $("#morse").keyup(function(e) {
     var endTime = new Date().valueOf();
     var score = endTime - time;
     clearInterval(counter);
-    $("#timer").text(displayElapsed(score));
     save_score(agent_name, score);
   }
 
@@ -84,7 +85,7 @@ $("#morse").keydown(function() {
       time = new Date().valueOf();
       counter = setInterval(function() {
                       var elapsed = (new Date().valueOf()) - time;
-                      displayElapsed(elapsed); }, 100);
+                      $("#timer").text(displayElapsed(elapsed)); }, 100);
     }
 }) //end of keydown
 
