@@ -65,7 +65,7 @@ document.onkeydown = function(e) {
 }
 	
 LOOPING?
-myAudio = new Audio('someSound.ogg'); 
+myAudio = new Audio(''); 
 myAudio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
@@ -74,16 +74,20 @@ myAudio.play();
 */
 
 function init() {
+	myAudio = $("#alarm").first().get(0)
 	var morseCode = [];
 	var d, t;
   $(document).keydown(function(evt) {
     if (evt.keyCode == 32 && d == null) {
 		d = new Date();
         t = d.valueOf();
+		myAudio.addEventListener('ended', loopSound, false);
+		myAudio.play();
     }
   });
   $(document).keyup(function(evt) {
 	 if (evt.keyCode == 32 && (d !== null)) {
+		 myAudio.removeEventListener('ended', loopSound);
 		 var dend = new Date();
 		 var tend = dend.valueOf();
 		 var finetime = tend - t;
@@ -97,7 +101,12 @@ function init() {
 		}
   });
 }
-  
+ 
+function loopSound() {
+	this.currentTime = 0;
+	this.play();
+}
+
 function morseCheck(finetime) {
 	if (finetime < 500) {
 		pressValue = ".";
