@@ -2,7 +2,7 @@ var baseURL = "https://agile-hamlet-2203.herokuapp.com/"
 var localURL = "http://localhost:3000/"
 
 function save_score(agent_name, score){
-	jQuery.post("http://localhost:3000/entries.json",{"name": window.agent_name, "score": score}, function(response){console.log(response);})
+	jQuery.post(baseURL+"entries.json",{"name": window.agent_name, "score": score}, function(response){console.log(response);})
 }
 
 $("#open").click(function()
@@ -17,7 +17,7 @@ $("#open").click(function()
 })
 
 $(document).ready(function () {
-$.getJSON(localURL+"entries.json",
+$.getJSON(baseURL+"entries.json",
 	function (data) {
 	    var tr;
 	    var rank = 1;
