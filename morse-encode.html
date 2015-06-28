@@ -4,22 +4,25 @@
 	<meta charset="utf-8"/><!-- HTML5 -->
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/morse-decode.css">
+	<link rel="stylesheet" href="css/morse-encode.css">
 
 </head>
 
 <body>
 
-	<div id="display-text"></div>
+	<div id="display-morse"></div>
 
 	<div id="morse-text">
 		<textarea id="morse" cols="100"></textarea>
 		<button id="clear">Clear</button>
 		<button id="submit">Submit</button>
 	</div>
+	<audio id="alarm" loop="true">
+		<source src="sound%20files/oneping.wav">
+	</audio>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/lessons.js"></script>
-	<script type="text/javascript" src="js/morse-decode.js"></script>
+	<script type="text/javascript" src="js/morse-encode.js"></script>
 </body>
 </html>

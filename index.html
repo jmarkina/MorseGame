@@ -4,15 +4,18 @@
 <meta charset="UTF-8">
 <title>Saving the world with Morse</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+<link rel="stylesheet" href="css/morse-decode.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/name_gen.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 </head>
 <body onload="generator()">
 	<header>
-		<nav class="navbar navbar-default bg-color">
+		<!-- <nav class="navbar navbar-default bg-color">
 			<div class="container-fluid">
 			<a href="index.html">
 			<p class="sitename">MorseGame</p>
@@ -22,25 +25,34 @@
 			<input class="btn btn-default sign-up" type="button" value="Sign up">
 			</div>
 			</div>
-		</nav>
+		</nav> -->
 	<div class="jumbotron bg-color">
 		<div class="container">
-			<h1>Learn Morse. Save the World.</h1>
-			<div class="alien"></div>
+		<div class="alien-container">
+		<div class="learn">
+			<h1>Learn Morse</h1>
+		</div>
+		<div class="alien"></div>
+		<div class="save">
+			<h1>Save the World</h1>
+		</div>
+		</div>
 			<p>Invaders have arrived from outer space. The human resistance needs you to transmit and receive encoded messages.</p>
-			<p><a href="index.html#morsetable">Learn</a> - <a href="index.html#leader">Compete</a> - <a href="about.html">Survive</a></p>
-			<a href="morse-decode.html" type="button" class="btn btn-primary btn-lg btn-cstm">Decode Messages</a>
+			<p><a class="cheatsheet">Learn</a> - <!-- <a href=""> -->Compete<!-- </a> --> - <!-- <a href="wtf.html"> -->Survive<!-- </a> --></p>
+			<div class="codeimg"></div>
+			<div class="buttons">
+			<a href="#decode" type="button" class="btn btn-primary btn-lg btn-cstm">Decode Messages</a>
   			<a type="button" class="btn btn-success btn-lg btn-cstm">Encode Messages</a>
+  			</div>
 		</div>
 	</div>
 	</header>
-	<section id="morsetable" class="text-center">
+	<!-- <section id="morsetable" class="text-center">
 		like put a table here or something
-	</section>
-	
-	<section id="leader" class="leaderboard">
-		<h1>Rankings</h1>
-		<div class="leaders">
+	</section> -->
+	<section id="secretagent" class="agent">
+		<h1>Welcome Agent!</h1>
+		<div class="agentname">
 			<!-- The generator result and button. Change text on the button by changing button value. Be carefull changing ID's in this part -->
 			<div id="generator" >
 				<div id="placeholder"></div>
@@ -48,10 +60,57 @@
 			</div>
 		</div>
 	</section>
+	<section id="leaderboard">
+		<h1>Leaders of the Pack</h1>
+		<div class="leaders">
+			<table class="table table-striped board">
+				<tr>
+			    <th>Rank</th>
+			    <th>Name</th> 
+			    <th>Score</th>
+				</tr>
+				<tr>
+				<td>1</td>
+				<td>Jackson</td> 
+				<td>94</td>
+				</tr>
+				<tr>
+				<td>2</td>
+				<td>Maya</td> 
+				<td>80</td>
+				</tr>
+				<tr>
+				<td>3</td>
+				<td>John</td> 
+				<td>70</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section id="decode">
+		<h3>Translate Morse Code into English. Work as fast as you can. You are being timed!</h3>
+		<audio controls>
+  			<source src="sound/mediummorse.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+		<div id="display-morse"></div>
+	<div id="correct-text"></div>
+
+	<div id="morse-text">
+		<textarea id="morse" cols="150"></textarea>
+		<div id="decode-btns">
+			<button id="clear" class="btn btn-default btn-clr">Clear</button>
+			<button id="submit" class="btn btn-default btn-sbt">Submit</button>
+		</div>
+	</div>
+	</section>
 	<footer>
 	
 	</footer>
 
-<script type="text/javascript" src="js/leaderboard.js"></script>
+	<script type="text/javascript" src="js/leaderboard.js"></script>
+	<script type="text/javascript" src="js/lessons.js"></script>
+	<script type="text/javascript" src="js/morse-decode.js"></script>
+
 </body>
 <html>

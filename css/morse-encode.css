@@ -41,85 +41,34 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 input, select { vertical-align: middle; }
 
 /*--------------------------------Beginning of code------------------------------------*/
-#decode {
-	background-color: #F4F1F5;
-  	padding: 30px 0;
+body {
+	font-family: sans-serif;
 }
-#decode {
-	text-align: center;
-  	font-weight: normal;
-}
-#morse {
-	height: 100px;
-	margin: 0 auto;
-	font-size: 35px;
-}
-#morse-text {
+#morse-area {
 	position: relative;
-	font-family: monospace !important;
 }
 #display-morse {
 	display: block;
-	margin: 40px 20px;
+	margin: 40px auto;
 	font-size: 40px;
 	text-align: center;
-	font-family: monospace !important;
-}
-#correct-text {
-	display: block;
-	margin: 0 auto;
-	font-size: 40px;
-	height: 70px;
-	text-align: center;
-	letter-spacing: 0.8em;
-	font-family: monospace !important;
-}
-#decode-btns {
-	text-align: center;
-	margin-top: 30px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: monospace;
 }
 textarea {
 	display: block;
-	margin: 0 auto;
+	margin: 100px auto;
 	font-size: 50px;
 	max-width: 700px;
-	font-family: monospace !important;
-}
-#timer {
-	display: block;
-	text-align: center;
-	margin-top: 30px;
+	font-family: monospace;
 }
 button {
 	display: block;
-	margin: 20px 20px;
-}
+	margin: 0 auto;
 
+}
 .typed {
-	color: lime;
+	color: green;
 }
-.btn.btn-default.btn-clr {
-	width: 100px;
-  	height: 50px;
-  	margin-right: 20px;
-  	font-size: 18px;
-}
-.btn.btn-default.btn-sbt:hover {
-	background-color: #08727a;
-}
-.btn.btn-default.btn-sbt {
-	background-color: #148C95;
-	width: 100px;
-  	height: 50px;
-  	margin-right: 20px;
-  	font-size: 18px;
-  	color: #fff;
-  	text-shadow: 1px 1px #000;
-}
-audio {
-	margin-top: 20px;
-}
-/*.untyped {
+.untyped {
 	color: red;
-}*/
+}
