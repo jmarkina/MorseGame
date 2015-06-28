@@ -56,6 +56,10 @@ function checkASCII(data, lesson) {
 //initial launch
 $("#display-morse").text(textToMorse(LESSONS.Lesson1.text));
 
+$("#clear").click(function() {
+    $("#morse").val("");
+})
+
  $("#morse").keyup(function(e) {
     var expected = LESSONS.Lesson1.text;
  	//$("#display-text").text(textToMorse($("#morse").val()).join(" "));
