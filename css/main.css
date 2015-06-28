@@ -1,9 +1,21 @@
 .container {
-	margin: 0 auto;
 	text-align: center;
 }
 .leaders {
 	width: 100%;
 	height: auto;
 	background-color: #c0ffee;
+}
+.leaderboard {
+	margin: 0 auto;
+	text-align: center;
+}
+.sitename {
+	display: inline-block;
+	font-size: 26px;
+	font-weight: bold;
+	color: #EB0AA0;
+}
+.navbar-right {
+	margin-top: 6px;
 }
