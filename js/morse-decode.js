@@ -49,6 +49,7 @@ $("#clear").click(function() {
     clearInterval(counter);
     //time = null;
     $("#timer").text("00:00.000");
+    $("#display-morse").text(textToMorse(LESSONS.Lesson1.text));
 })
 
 $("#morse").keyup(function(e) {
